@@ -47,27 +47,33 @@ ns.SONS = {
 	{ nom = "Quête acceptée", kit = "IG_QUEST_LIST_OPEN" },
 }
 
--- Donjons et raids (nom, niveau conseillé). Liste à confirmer pour Forever.
+-- Donjons et raids de WoW Forever (nom, niveau mini conseillé), relevés le 22/11/2026.
 ns.DONJONS = {
-	{ "Gouffre de Ragefeu", 13 }, { "Les Mortemines", 17 }, { "Cavernes des Lamentations", 17 },
+	-- les donjons d'origine (niveau = bas de la fourchette du Group Finder)
+	{ "Gouffre de Ragefeu", 13 }, { "Cavernes des Lamentations", 17 }, { "Les Mortemines", 17 },
 	{ "Donjon d'Ombrecroc", 22 }, { "Profondeurs de Brassenoire", 24 }, { "La Prison", 24 },
 	{ "Gnomeregan", 29 }, { "Kraal de Tranchebauge", 29 }, { "Monastère écarlate : Cimetière", 30 },
-	{ "Monastère écarlate : Bibliothèque", 33 }, { "Monastère écarlate : Armurerie", 35 },
-	{ "Monastère écarlate : Cathédrale", 37 }, { "Souilles de Tranchebauge", 37 }, { "Uldaman", 41 },
+	{ "Monastère écarlate : Bibliothèque", 33 }, { "Monastère écarlate : Armurerie", 36 },
+	{ "Souilles de Tranchebauge", 37 }, { "Monastère écarlate : Cathédrale", 38 }, { "Uldaman", 41 },
 	{ "Zul'Farrak", 44 }, { "Maraudon", 46 }, { "Temple d'Atal'Hakkar", 50 },
-	{ "Profondeurs de Rochenoire", 52 }, { "Pic de Rochenoire inférieur", 55 }, { "Pic de Rochenoire supérieur", 58 },
-	{ "Hache-Tripes", 55 }, { "Scholomance", 58 }, { "Stratholme", 58 },
-	{ "Cœur du Magma", 60 }, { "Repaire d'Onyxia", 60 }, { "Zul'Gurub", 60 }, { "Repaire de l'Aile noire", 60 },
-	{ "Ruines d'Ahn'Qiraj", 60 }, { "Temple d'Ahn'Qiraj", 60 }, { "Naxxramas", 60 },
+	{ "Profondeurs de Rochenoire", 52 }, { "Hache-Tripes Est", 54 }, { "Pic de Rochenoire inférieur", 55 },
+	{ "Hache-Tripes Nord", 56 }, { "Hache-Tripes Ouest", 56 }, { "Scholomance", 58 }, { "Stratholme", 58 },
+	{ "Pic de Rochenoire supérieur", 59 },
+	-- les 9 nouveaux de Forever (noms anglais : nom français à relever en jeu)
+	{ "Hall of Thanes", 13 }, { "Ruins of Lordaeron", 15 }, { "Excavation Site: Wetlands", 26 },
+	{ "City of Dalaran", 28 }, { "The Drowned City", 35 }, { "Krol'dok Stronghold", 40 },
+	{ "Alcaz Prison", 48 }, { "Blackmaw Hold", 55 }, { "Shaper's Terrace", 58 },
+	-- les raids ouverts le 9 décembre 2026
+	{ "Barrow Deeps", 60 }, { "Hyjal Summit", 60 }, { "Repaire d'Onyxia", 60 },
 }
 
--- Zones (côté Alliance et neutres). Liste à confirmer pour Forever.
+-- Zones de quêtes (Alliance, neutres et contestées), avec les nouvelles de Forever.
 ns.ZONES = {
-	"Forêt d'Elwynn", "Dun Morogh", "Teldrassil", "Marche de l'Ouest", "Loch Modan", "Sombrivage",
-	"Les Carmines", "Bois de la Pénombre", "Les Paluns", "Contreforts de Hautebrande", "Les Tarides",
-	"Orneval", "Serres-Rocheuses", "Mille pointes", "Désolace", "Strangleronce", "Marécage d'Âprefange",
-	"Hautes-terres d'Arathi", "Terres ingrates", "Les Hinterlands", "Féralas", "Tanaris", "Azshara",
-	"Terres foudroyées", "Gorge des Vents brûlants", "Steppes ardentes", "Marais des Chagrins",
-	"Cratère d'Un'Goro", "Gangrebois", "Berceau-de-l'Hiver", "Maleterres de l'Ouest", "Maleterres de l'Est",
-	"Silithus", "Hurlevent", "Forgefer", "Darnassus",
+	"Forêt d'Elwynn", "Dun Morogh", "Teldrassil", "Zephras Isle", "Marche de l'Ouest", "Loch Modan", "Sombrivage",
+	"Les Carmines", "Bois de la Pénombre", "Les Paluns", "Contreforts de Hautebrande", "Montagnes d'Alterac",
+	"Les Tarides", "Orneval", "Serres-Rocheuses", "Mille pointes", "Désolace", "Shen'Dralas", "Strangleronce",
+	"Riverglades", "Marécage d'Âprefange", "Hautes-terres d'Arathi", "Terres ingrates", "Les Hinterlands",
+	"Féralas", "Tanaris", "Azshara", "Terres foudroyées", "Gorge des Vents brûlants", "Steppes ardentes",
+	"Marais des Chagrins", "Cratère d'Un'Goro", "Gangrebois", "Berceau-de-l'Hiver", "Maleterres de l'Ouest",
+	"Maleterres de l'Est", "Silithus", "Mont Hyjal", "Hurlevent", "Forgefer", "Darnassus",
 }

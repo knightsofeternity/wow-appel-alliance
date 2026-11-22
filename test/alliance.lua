@@ -383,7 +383,7 @@ sym.ns.ouvrir("miennes")
 verifier(contient(sym.ns.pages.miennes.titre:GetText(), "Libre"), "Mes annonces montre l'annonce en cours")
 lumi.ns.ouvrirFormulaire()
 local f = lumi.ns.formulaire()
-verifier(f:IsShown() and contient(f.choix.lignes[1].nom:GetText(), "17+") and contient(f.choix.lignes[3].nom:GetText(), "13+"),
+verifier(f:IsShown() and contient(f.choix.lignes[1].nom:GetText(), "17+") and contient(f.choix.lignes[3].nom:GetText(), "Ruins of Lordaeron") and contient(f.choix.lignes[3].nom:GetText(), "15+"),
 	"formulaire : les donjons de mon niveau d'abord, les plus proches en tête (niveau 18)")
 f.lieu:SetText("morte")
 f.lieu._scripts.OnTextChanged(f.lieu, true)
