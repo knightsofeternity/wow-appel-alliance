@@ -4,7 +4,7 @@
 -- noms exacts des guildes, liens Discord, listes des donjons et des zones.
 local _, ns = ...
 
-ns.VERSION = "1.0.0"
+ns.VERSION = "1.0.1"
 ns.PROTO = 1                 -- version du protocole : un message d'une autre version est ignoré
 ns.PREFIXE = "KEALLY"        -- préfixe des messages d'addon (16 caractères au plus)
 ns.MARQUE = "[KEA]"          -- début d'un message texte de l'option B (filtré du chat)
