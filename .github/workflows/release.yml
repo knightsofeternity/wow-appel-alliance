@@ -1,0 +1,32 @@
+name: release
+# Un tag vX.Y.Z publie AppelAlliance-X.Y.Z.zip sur la page Releases du dépôt.
+# Le lien stable à partager est :
+# https://github.com/knightsofeternity/wow-appel-alliance/releases/latest/download/AppelAlliance.zip
+on:
+  push:
+    tags: ['v*']
+permissions:
+  contents: write
+jobs:
+  zip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq lua5.1
+      - run: lua5.1 test/alliance.lua | tee /tmp/alliance.txt && grep -q 'tout est vert' /tmp/alliance.txt
+      - name: Le tag doit être la version de l'addon
+        run: |
+          v="${GITHUB_REF_NAME#v}"
+          grep -q "^## Version: $v\$" AppelAlliance/AppelAlliance.toc
+      - name: Zip
+        run: |
+          v="${GITHUB_REF_NAME#v}"
+          zip -r "AppelAlliance-$v.zip" AppelAlliance
+          cp "AppelAlliance-$v.zip" AppelAlliance.zip
+      - name: Publier
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          v="${GITHUB_REF_NAME#v}"
+          gh release create "$GITHUB_REF_NAME" "AppelAlliance-$v.zip" AppelAlliance.zip \
+            --title "Appel d'Alliance $v" --notes-file .github/release-notes.md
